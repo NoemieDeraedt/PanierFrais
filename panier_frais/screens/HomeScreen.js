@@ -22,7 +22,9 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.containImages}>
+          <Image source={require('../assets/images/icon_menu.png')} style={styles.menu} />
           <Image source={require('../assets/images/logo_name.png')} style={styles.logo} />
+          <Image source={require('../assets/images/panier.png')} style={styles.panier} />
         </View>
         <ScrollView>
           <SearchBar lightTheme
@@ -36,42 +38,70 @@ export default class HomeScreen extends React.Component {
             <TouchableOpacity style={styles.plats}>
               <Image source={require('../assets/images/plats/ratatouille.png')} style={styles.imgPlat} />
               <View>
-                <Text style={styles.text}> Ratatouille </Text>
+                <Text style={styles.text_title}> Ratatouille </Text>
                 <Text style={styles.text}> Temps de préparation: 15min </Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.plats}>
               <Image source={require('../assets/images/plats/chili_con_carne.png')} style={styles.imgPlat} />
               <View>
-                <Text style={styles.text}> Chili Con Carne </Text>
+                <Text style={styles.text_title}> Chili Con Carne </Text>
                 <Text style={styles.text}> Temps de préparation: 15min </Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.plats}>
               <Image source={require('../assets/images/plats/gaspacho.jpg')} style={styles.imgPlat} />
               <View>
-                <Text style={styles.text}> Gaspacho </Text>
+                <Text style={styles.text_title}> Gaspacho </Text>
                 <Text style={styles.text}> Temps de préparation: 15min </Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.plats}>
               <Image source={require('../assets/images/plats/ratatouille.png')} style={styles.imgPlat} />
               <View>
-                <Text style={styles.text}> Ratatouille </Text>
+                <Text style={styles.text_title}> Ratatouille </Text>
                 <Text style={styles.text}> Temps de préparation: 15min </Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.plats}>
               <Image source={require('../assets/images/plats/chili_con_carne.png')} style={styles.imgPlat} />
               <View>
-                <Text style={styles.text}> Chili Con Carne </Text>
+                <Text style={styles.text_title}> Chili Con Carne </Text>
                 <Text style={styles.text}> Temps de préparation: 15min </Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.plats}>
               <Image source={require('../assets/images/plats/gaspacho.jpg')} style={styles.imgPlat} />
               <View>
-                <Text style={styles.text}> Gaspacho </Text>
+                <Text style={styles.text_title}> Gaspacho </Text>
+                <Text style={styles.text}> Temps de préparation: 15min </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.plats}>
+              <Image source={require('../assets/images/plats/ratatouille.png')} style={styles.imgPlat} />
+              <View>
+                <Text style={styles.text_title}> Ratatouille </Text>
+                <Text style={styles.text}> Temps de préparation: 15min </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.plats}>
+              <Image source={require('../assets/images/plats/chili_con_carne.png')} style={styles.imgPlat} />
+              <View>
+                <Text style={styles.text_title}> Chili Con Carne </Text>
+                <Text style={styles.text}> Temps de préparation: 15min </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.plats}>
+              <Image source={require('../assets/images/plats/gaspacho.jpg')} style={styles.imgPlat} />
+              <View>
+                <Text style={styles.text_title}> Gaspacho </Text>
+                <Text style={styles.text}> Temps de préparation: 15min </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.plats}>
+              <Image source={require('../assets/images/plats/ratatouille.png')} style={styles.imgPlat} />
+              <View>
+                <Text style={styles.text_title}> Ratatouille </Text>
                 <Text style={styles.text}> Temps de préparation: 15min </Text>
               </View>
             </TouchableOpacity>
@@ -87,22 +117,41 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFF',
   },
+  panier: {
+    width: 40,
+    height: 40,
+    marginTop: 40,
+    marginLeft: 30,
+  },
   imageRecettes: {
     width: width,
+    height: 50,
     resizeMode: 'stretch',
   },
   logo: {
-    marginTop: 30,
+    marginTop: 40,
     height: 75,
     width: 194,
   },
   containImages: {
     backgroundColor: '#CDCDCD',
-    height: 115,
+    height: 125,
+    justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
+  },
+  menu: {
+    width: 30,
+    height: 30,
+    marginTop: 40,
+    marginRight: 30,
+  },
+  text_title: {
+    color: '#FFF',
+    fontSize: 20,
   },
   text: {
-    color: '#FFF',
+    color: '#A69587',
   },
   plats: {
     flex: 1,
